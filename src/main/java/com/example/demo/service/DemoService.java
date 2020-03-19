@@ -37,15 +37,10 @@ public class DemoService {
                 HintManagerHolder.clear();
                 HintManager hintManager = HintManager.getInstance();
                 hintManager.addDatabaseShardingValue("user_info", "user_id", 3L);
-                hintManager.addTableShardingValue("user_info", "user_id", 3L);
+                hintManager.addTableShardingValue("user_info ", "user_id", 3L);
                 System.out.println(userId);
             }
             userInfoMapper.insert(userInfo);
-//
-
-//
-
-
         }
         System.out.println("over..........");
     }
