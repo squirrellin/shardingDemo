@@ -212,9 +212,9 @@ public class DataSourceConfig {
     private DataSource createDataSource(final String dataSourceName) {
         BasicDataSource result = new BasicDataSource();
         result.setDriverClassName(com.mysql.jdbc.Driver.class.getName());
-        result.setUrl(String.format("jdbc:mysql://localhost:3306/%s", dataSourceName));
+        result.setUrl(String.format("jdbc:mysql://localhost:3306/sys", dataSourceName));
         result.setUsername("root");
-        result.setPassword("123456");
+        result.setPassword("root");
         return result;
     }
 

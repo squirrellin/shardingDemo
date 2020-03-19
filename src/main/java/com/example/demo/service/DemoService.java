@@ -7,11 +7,14 @@ import groovy.util.logging.Slf4j;
 import io.shardingjdbc.core.api.HintManager;
 import io.shardingjdbc.core.hint.HintManagerHolder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
 @Slf4j
 @Service
+@RestController
 public class DemoService {
 
     @Resource
@@ -19,6 +22,7 @@ public class DemoService {
 
     public static Long userId = 150L;
 
+    @PostMapping("/add")
     public void demo() {
         System.out.println("Insert--------------");
 
